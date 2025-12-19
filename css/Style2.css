@@ -1,0 +1,299 @@
+/* =========================
+   Global Styles
+   ========================= */
+
+body {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =========================
+   Headings
+   ========================= */
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h2 {
+  border-left: 6px solid #0d6efd;
+  padding-left: 15px;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 15px;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #0d6efd, #20c997);
+  border-radius: 3px;
+}
+
+/* =========================
+   Header Customization
+   ========================= */
+
+header {
+  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header small {
+  opacity: 0.9;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   Navigation Buttons
+   ========================= */
+
+header nav a.btn {
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+header nav a.btn-light {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: white !important;
+}
+
+header nav a.btn-light:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header nav a.btn-warning {
+  background: #ffc107;
+  border-color: #ffc107;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+header nav a.btn-warning:hover {
+  background: #ffca2c;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+}
+
+/* =========================
+   Cards (Content Boxes)
+   ========================= */
+
+.card {
+  border-radius: 16px;
+  border: none;
+  background: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0d6efd, #20c997);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   Mood Buttons (Home Page)
+   ========================= */
+
+button.btn {
+  min-width: 120px;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+button.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   Lists
+   ========================= */
+
+ul {
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 12px;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+ul li::before {
+  content: '🌿';
+  position: absolute;
+  left: 0;
+  color: #20c997;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+  background: linear-gradient(135deg, #343a40 0%, #212529 100%);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+footer small {
+  opacity: 0.8;
+}
+
+/* =========================
+   Main Content
+   ========================= */
+
+main {
+  min-height: 70vh;
+  padding: 3rem 0;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+/* =========================
+   Home Page Header Special
+   ========================= */
+
+.text-black header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 1px solid #dee2e6;
+}
+
+.text-black header h1 {
+  color: #2c3e50;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.text-black header small {
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+/* =========================
+   Responsive Adjustments
+   ========================= */
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  header .d-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .card {
+    padding: 1.5rem !important;
+  }
+}
+.list-unstyled li {
+  padding-left: 0;
+  position: relative;
+}
+
+.list-unstyled li::before {
+  content: none;
+}
+
+/* Card improvements */
+.shadow-lg {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Border utilities */
+.border-bottom {
+  border-bottom: 1px solid #eee !important;
+}
+
+/* Text utilities */
+.text-secondary {
+  color: #6c757d !important;
+}
+
+/* Small text improvements */
+.small {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Spacing utilities */
+.pb-3 {
+  padding-bottom: 1rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+/* Gradient background for tips */
+.bg-gradient-tip {
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+/* Keep the original format structure */
+.card ul.list-unstyled {
+  padding-left: 0;
+}
+
+.card ul.list-unstyled li {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.card ul.list-unstyled li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
