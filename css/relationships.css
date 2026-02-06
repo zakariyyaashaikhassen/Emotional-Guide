@@ -1,0 +1,291 @@
+/* relationships.css - Relationship Pages Specific Styles */
+
+/* =========================
+   Relationship Page Layout
+   ========================= */
+
+.relationship-content {
+    line-height: 1.7;
+}
+
+/* Card enhancements for relationship pages */
+.relationship-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.relationship-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Skill items on main page */
+.skill-item {
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid #e9ecef;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    border-color: #4a6fa5;
+    box-shadow: 0 5px 15px rgba(74, 111, 165, 0.1);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    min-width: 50px;
+}
+
+.skill-link {
+    color: #166088;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.skill-link:hover {
+    color: #4a6fa5;
+    text-decoration: underline;
+}
+
+/* Sidebar styling */
+.relationship-sidebar {
+    position: sticky;
+    top: 20px;
+}
+
+.assessment-box, .tip-box, .resource-box {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.assessment-box {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px solid #dee2e6;
+}
+
+.tip-box {
+    background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+    border: 1px solid #ffd8a6;
+}
+
+.resource-box {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border: 1px solid #90caf9;
+}
+
+/* Step cards for conflict resolution */
+.step-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.step-card:hover {
+    border-color: #4a6fa5;
+    transform: translateY(-3px);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #166088 0%, #4a6fa5 100%);
+    color: white;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Quick navigation grid */
+.topic-grid-five {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.topic-grid-five .topic-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+/* Make last two items in row 2 wider to fill space */
+.topic-grid-five .topic-card:nth-child(4),
+.topic-grid-five .topic-card:nth-child(5) {
+    grid-column: span 1.5;
+}
+
+.topic-grid-five .topic-card:hover {
+    border-color: #4a6fa5;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(74, 111, 165, 0.15);
+}
+
+.topic-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.topic-title {
+    color: #166088;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.topic-desc {
+    color: #6c757d;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Badges */
+.badge {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+/* Form elements for assessments */
+.form-range {
+    height: 5px;
+    cursor: pointer;
+}
+
+/* Assessment results */
+#assessment-result, .result-box, #feedback-box {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Remove dropdown arrows */
+.nav-dropdown .dropdown-toggle::after {
+    display: none !important;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 250px;
+    border: 1px solid #e9ecef;
+    padding: 0.5rem 0;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-header {
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    color: #166088;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown-item-icon {
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+    width: 24px;
+    text-align: center;
+}
+
+.dropdown-item-content {
+    flex: 1;
+}
+
+.dropdown-item-content h5 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.dropdown-item-content p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .topic-grid-five {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .topic-grid-five .topic-card:nth-child(4),
+    .topic-grid-five .topic-card:nth-child(5) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .topic-grid-five {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .skill-item {
+        padding: 1rem;
+    }
+    
+    .relationship-sidebar {
+        position: static;
+        margin-top: 2rem;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #e9ecef;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .step-card {
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathing Techniques – Emotional Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+       <header>
+        <div class="container">
+            <div class="logo-area" style="text-align: center;">
+                <h1><i class="fas fa-seedling me-2"></i>YOUR EMOTIONAL GUIDE</h1>
+                <small>Support for emotions, stress & daily life</small>
+            </div>
+               <nav>
+                <a href="index.html" class="btn-light"><i class="fas fa-home me-1"></i>Home</a>
+                <a href="mood.html" class="btn-light"><i class="fas fa-heartbeat me-1"></i>Mood Check</a>
+                <a href="topics.html" class="btn-light"><i class="fas fa-comments me-1"></i>Topics</a>
+                <a href="family.html" class="btn-light"><i class="fas fa-users me-1"></i>Family</a>
+                <a href="relationships.html" class="btn-light"><i class="fas fa-hands-helping me-1"></i>Relationships</a>
+                <a href="calm.html" class="btn-warning active"><i class="fas fa-spa me-1"></i>Calm Technique</a>
+                <a href="about.html" class="btn-light"><i class="fas fa-info-circle me-1"></i>About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- BACK TO MAIN CALM PAGE -->
+            <div class="mb-3">
+                <a href="calm.html" class="text-primary text-decoration-none">← Back to All Calm Techniques</a>
+            </div>
+            
+            <h1 class="page-title">Breathing Techniques</h1>
+            <h5 class="text-secondary mb-4"><strong>Use breath to calm your nervous system and reduce anxiety instantly.</strong></h5>
+
+            <!-- HERO IMAGE SECTION -->
+            <div class="card mb-5 border-0 shadow-sm overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="images/Breathing.jpg" class="img-fluid h-100 object-fit-cover" alt="Person practicing deep breathing in a peaceful setting" style="min-height: 300px;">
+                    </div>
+                    <div class="col-md-6 bg-light d-flex align-items-center">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="text-primary">The Power of Breath</h2>
+                            <p class="lead">Breathing is your body's built-in stress relief system. When practiced intentionally, it can calm your mind, reduce anxiety, and restore balance in minutes.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <div class="me-3">
+                                    <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; font-size: 1.5rem;">💨</div>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Instant Calm</h5>
+                                    <p class="small text-secondary mb-0">Activate your parasympathetic nervous system within seconds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <!-- 4-7-8 BREATHING -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3" style="font-size: 2.5rem;">🌀</div>
+                                <div>
+                                    <h3 class="text-primary mb-0">4-7-8 Breathing</h3>
+                                    <p class="text-secondary small">Inhale 4s, Hold 7s, Exhale 8s</p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <p>This technique helps activate your parasympathetic nervous system, reducing stress and anxiety. Developed by Dr. Andrew Weil, it's perfect for falling asleep or calming anxiety attacks.</p>
+                                    <button onclick="startBreathing478()" class="btn-submit">Start 4-7-8 Exercise</button>
+                                </div>
+                                <div class="col-md-4 text-center d-none d-md-block">
+                                    <div class="p-3 rounded" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
+                                        <div class="display-6 text-primary">4-7-8</div>
+                                        <small class="text-secondary">The Relaxing Ratio</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="breathing-478-guide" class="mt-4 p-4 bg-light rounded" style="display:none;">
+                                <h5 class="text-primary">Follow the rhythm:</h5>
+                                <div id="breath-478-timer" class="text-center my-4" style="font-size: 4rem;">🌀</div>
+                                <div id="breath-478-text" class="text-center h5 mb-3">Ready to begin...</div>
+                                <div id="breath-478-count" class="text-center" style="font-size: 1.5rem;">0 seconds</div>
+                                <div class="progress mt-3" style="height: 10px;">
+                                    <div id="breath-progress" class="progress-bar bg-primary" style="width: 0%"></div>
+                                </div>
+                                <button onclick="stopBreathing478()" class="btn-submit w-100 mt-4">Stop Exercise</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOX BREATHING -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3" style="font-size: 2.5rem;">⬛</div>
+                                <div>
+                                    <h3 class="text-success mb-0">Box Breathing</h3>
+                                    <p class="text-secondary small">4-4-4-4 Pattern</p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <p>Equal breathing pattern used by Navy SEALs to stay calm under pressure. Also called "square breathing," it helps reset your nervous system and improve focus.</p>
+                                    <button onclick="startBoxBreathing()" class="btn-submit">Start Box Breathing</button>
+                                </div>
+                            </div>
+                            
+                            <div id="box-breathing-guide" class="mt-4 p-4 bg-light rounded" style="display:none;">
+                                <div class="row text-center">
+                                    <div class="col-3">
+                                        <div class="p-3 border rounded">
+                                            <h5>INHALE</h5>
+                                            <div id="box-inhale" class="display-6">4</div>
+                                            <small>seconds</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="p-3 border rounded">
+                                            <h5>HOLD</h5>
+                                            <div id="box-hold1" class="display-6">4</div>
+                                            <small>seconds</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="p-3 border rounded">
+                                            <h5>EXHALE</h5>
+                                            <div id="box-exhale" class="display-6">4</div>
+                                            <small>seconds</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="p-3 border rounded">
+                                            <h5>HOLD</h5>
+                                            <div id="box-hold2" class="display-6">4</div>
+                                            <small>seconds</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button onclick="stopBoxBreathing()" class="btn-submit w-100 mt-4">Stop</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BELLY BREATHING -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3" style="font-size: 2.5rem;">🤲</div>
+                                <div>
+                                    <h3 class="text-info mb-0">Diaphragmatic Breathing</h3>
+                                    <p class="text-secondary small">Belly Breathing for Deep Relaxation</p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <p>Breathe deeply into your belly, not your chest. This engages the diaphragm fully and is the foundation for all breathing exercises.</p>
+                                    <ol class="mb-3">
+                                        <li>Place one hand on chest, one on belly</li>
+                                        <li>Inhale slowly through nose, feel belly rise</li>
+                                        <li>Exhale slowly through pursed lips</li>
+                                        <li>Keep chest relatively still</li>
+                                    </ol>
+                                    <button onclick="startBellyBreathing()" class="btn-submit">Start Guided Belly Breathing</button>
+                                </div>
+                            </div>
+                            <div id="belly-guide" class="mt-3 p-3 bg-light rounded" style="display:none;">
+                                <h6>Focus on your belly rising and falling</h6>
+                                <div class="text-center my-3">
+                                    <div style="font-size: 4rem;">⬆️</div>
+                                    <div id="belly-text" class="h5 mt-2">Belly Rising...</div>
+                                </div>
+                                <button onclick="stopBellyBreathing()" class="btn-submit w-100">Stop</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <!-- TECHNIQUE SELECTOR -->
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="text-primary mb-3">Choose Your Technique</h4>
+                            <div class="list-group">
+                                <a href="#478-breathing" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <div class="me-3 text-primary">🌀</div>
+                                    <div>
+                                        <h6 class="mb-1">4-7-8 Breathing</h6>
+                                        <small class="text-secondary">For sleep & anxiety</small>
+                                    </div>
+                                </a>
+                                <a href="#box-breathing" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <div class="me-3 text-success">⬛</div>
+                                    <div>
+                                        <h6 class="mb-1">Box Breathing</h6>
+                                        <small class="text-secondary">For focus & calm</small>
+                                    </div>
+                                </a>
+                                <a href="#belly-breathing" class="list-group-item list-group-item-action d-flex align-items-center">
+                                    <div class="me-3 text-info">🤲</div>
+                                    <div>
+                                        <h6 class="mb-1">Belly Breathing</h6>
+                                        <small class="text-secondary">For deep relaxation</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- BENEFITS CARD -->
+                    <div class="p-4 bg-light rounded mb-4">
+                        <h4 class="text-primary">Why Breathing Works</h4>
+                        <img src="images/Breathing.jpg" class="img-fluid rounded mb-3" alt="Close-up of person practicing breathing" style="max-height: 150px; object-fit: cover;">
+                        <p class="small">Deep breathing activates the parasympathetic nervous system ("rest and digest"), reducing cortisol and calming the mind.</p>
+                        
+                        <div class="mt-3">
+                            <h5>Tips for Success:</h5>
+                            <ul class="small">
+                                <li>Practice daily for 5 minutes</li>
+                                <li>Use before stressful events</li>
+                                <li>Combine with gentle movement</li>
+                                <li>Focus on exhale being longer than inhale</li>
+                                <li>Start with 3-5 rounds, build gradually</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- OTHER TECHNIQUES -->
+                    <div class="p-4 rounded" style="background: linear-gradient(135deg, #e8f4fd, #d4e7fa);">
+                        <h5 class="text-primary">Other Calm Techniques</h5>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="grounding.html" class="btn-submit">Grounding Exercises →</a>
+                            <a href="pause.html" class="btn-submit">Pause Techniques →</a>
+                            <a href="physical.html" class="btn-submit">Physical Movement →</a>
+                            <a href="affirmations.html" class="btn-submit">Affirmations →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BREATHING SCIENCE SECTION -->
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="text-primary">🧠 The Science of Breath</h4>
+                            <p class="small">When you breathe deeply:</p>
+                            <ul class="small">
+                                <li><strong>Vagus nerve</strong> is stimulated, slowing heart rate</li>
+                                <li><strong>Cortisol levels</strong> drop significantly</li>
+                                <li><strong>Oxygen exchange</strong> improves in lungs</li>
+                                <li><strong>Blood pressure</strong> normalizes</li>
+                                <li><strong>Brain waves</strong> shift to alpha (relaxed) state</li>
+                            </ul>
+                            <p class="small mt-3">Just 5 minutes of deep breathing can reduce anxiety by up to 40%.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="text-success">⏰ When to Practice</h4>
+                            <ul class="small">
+                                <li><strong>Morning:</strong> Set calm tone for day</li>
+                                <li><strong>Before meals:</strong> Improve digestion</li>
+                                <li><strong>During breaks:</strong> Reset your nervous system</li>
+                                <li><strong>Before bed:</strong> Prepare for restful sleep</li>
+                                <li><strong>When stressed:</strong> Immediate calm response</li>
+                            </ul>
+                            <div class="mt-3 text-center">
+                                <div class="p-3 rounded d-inline-block" style="background: linear-gradient(135deg, #f3e5f5, #e1bee7);">
+                                    <div class="h4 mb-0">5 min/day</div>
+                                    <small>Recommended practice</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <small>&copy; 2026 The Emotional Helper – Calm through Breath</small>
+            <p class="mt-2 small"><a href="calm.html" class="text-primary">← Back to Main Calm Page</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // All JavaScript functions remain the same
+        let breath478Interval;
+        let breath478Count = 0;
+        
+        function startBreathing478() {
+            document.getElementById('breathing-478-guide').style.display = 'block';
+            breath478Count = 0;
+            
+            breath478Interval = setInterval(() => {
+                breath478Count++;
+                const totalCycle = 19; // 4+7+8
+                const progress = (breath478Count / totalCycle) * 100;
+                
+                document.getElementById('breath-progress').style.width = progress + '%';
+                document.getElementById('breath-478-count').textContent = breath478Count + ' seconds';
+                
+                if (breath478Count <= 4) {
+                    document.getElementById('breath-478-timer').textContent = '🌀';
+                    document.getElementById('breath-478-text').textContent = 'INHALE through nose';
+                    document.getElementById('breath-478-text').className = 'text-center h5 mb-3 text-primary';
+                } else if (breath478Count <= 11) {
+                    document.getElementById('breath-478-timer').textContent = '⏸️';
+                    document.getElementById('breath-478-text').textContent = 'HOLD your breath';
+                    document.getElementById('breath-478-text').className = 'text-center h5 mb-3 text-warning';
+                } else if (breath478Count <= 19) {
+                    document.getElementById('breath-478-timer').textContent = '🌬️';
+                    document.getElementById('breath-478-text').textContent = 'EXHALE slowly through mouth';
+                    document.getElementById('breath-478-text').className = 'text-center h5 mb-3 text-success';
+                } else {
+                    breath478Count = 0;
+                }
+            }, 1000);
+        }
+        
+        function stopBreathing478() {
+            clearInterval(breath478Interval);
+            document.getElementById('breathing-478-guide').style.display = 'none';
+        }
+        
+        let boxInterval;
+        let boxPhase = 0;
+        const boxPhases = ['INHALE', 'HOLD', 'EXHALE', 'HOLD'];
+        let boxCount = 4;
+        
+        function startBoxBreathing() {
+            document.getElementById('box-breathing-guide').style.display = 'block';
+            boxPhase = 0;
+            boxCount = 4;
+            
+            boxInterval = setInterval(() => {
+                boxCount--;
+                
+                if (boxCount < 0) {
+                    boxPhase = (boxPhase + 1) % 4;
+                    boxCount = 4;
+                }
+                
+                // Update all displays
+                document.getElementById('box-inhale').textContent = boxPhase === 0 ? boxCount : '4';
+                document.getElementById('box-hold1').textContent = boxPhase === 1 ? boxCount : '4';
+                document.getElementById('box-exhale').textContent = boxPhase === 2 ? boxCount : '4';
+                document.getElementById('box-hold2').textContent = boxPhase === 3 ? boxCount : '4';
+                
+                // Highlight active phase
+                const allBoxes = ['box-inhale', 'box-hold1', 'box-exhale', 'box-hold2'];
+                allBoxes.forEach((box, idx) => {
+                    const elem = document.getElementById(box).parentElement;
+                    elem.style.backgroundColor = idx === boxPhase ? '#e3f2fd' : '';
+                    elem.style.borderColor = idx === boxPhase ? '#2196f3' : '#dee2e6';
+                });
+                
+            }, 1000);
+        }
+        
+        function stopBoxBreathing() {
+            clearInterval(boxInterval);
+            document.getElementById('box-breathing-guide').style.display = 'none';
+        }
+        
+        let bellyInterval;
+        let isInhaling = true;
+        
+        function startBellyBreathing() {
+            document.getElementById('belly-guide').style.display = 'block';
+            isInhaling = true;
+            
+            bellyInterval = setInterval(() => {
+                if (isInhaling) {
+                    document.getElementById('belly-text').textContent = 'Belly Rising... INHALE';
+                    document.getElementById('belly-text').className = 'h5 mt-2 text-primary';
+                } else {
+                    document.getElementById('belly-text').textContent = 'Belly Falling... EXHALE';
+                    document.getElementById('belly-text').className = 'h5 mt-2 text-success';
+                }
+                isInhaling = !isInhaling;
+            }, 4000); // Switch every 4 seconds
+        }
+        
+        function stopBellyBreathing() {
+            clearInterval(bellyInterval);
+            document.getElementById('belly-guide').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

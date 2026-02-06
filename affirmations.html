@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive Affirmations – Emotional Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+       <header>
+        <div class="container">
+            <div class="logo-area" style="text-align: center;">
+                <h1><i class="fas fa-seedling me-2"></i>YOUR EMOTIONAL GUIDE</h1>
+                <small>Support for emotions, stress & daily life</small>
+            </div>
+              <nav>
+                <a href="index.html" class="btn-light"><i class="fas fa-home me-1"></i>Home</a>
+                <a href="mood.html" class="btn-light"><i class="fas fa-heartbeat me-1"></i>Mood Check</a>
+                <a href="topics.html" class="btn-light"><i class="fas fa-comments me-1"></i>Topics</a>
+                <a href="family.html" class="btn-light"><i class="fas fa-users me-1"></i>Family</a>
+                <a href="relationships.html" class="btn-light"><i class="fas fa-hands-helping me-1"></i>Relationships</a>
+                <a href="calm.html" class="btn-warning active"><i class="fas fa-spa me-1"></i>Calm Technique</a>
+                <a href="about.html" class="btn-light"><i class="fas fa-info-circle me-1"></i>About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- BACK TO MAIN CALM PAGE -->
+            <div class="mb-3">
+                <a href="calm.html" class="text-primary text-decoration-none">← Back to All Calm Techniques</a>
+            </div>
+            
+            <h1 class="page-title">Positive Affirmations</h1>
+            <h5 class="text-secondary mb-4"><strong>Replace negative self-talk with compassionate, empowering statements.</strong></h5>
+            
+            <!-- HERO IMAGE SECTION - UPDATED -->
+            <div class="card mb-5 border-0 shadow-sm overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="images/positive.webp" class="img-fluid h-100 object-fit-cover" alt="Positive words and inspiring messages about creativity and success" style="min-height: 300px;">
+                    </div>
+                    <div class="col-md-6 bg-light d-flex align-items-center">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="text-primary">The Impact of Positive Words</h2>
+                            <p class="lead">Affirmations rewire your brain by replacing negative thought patterns with positive, empowering statements that build self-esteem and resilience.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <div class="me-3">
+                                    <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; font-size: 1.5rem;">💭</div>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Mind Rewiring</h5>
+                                    <p class="small text-secondary mb-0">Create new neural pathways with daily practice</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- AFFIRMATION GENERATOR -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="me-3" style="font-size: 2.5rem;">💭</div>
+                                <div>
+                                    <h3 class="text-warning mb-0">Affirmation Generator</h3>
+                                    <p class="text-secondary small">Daily positive statements</p>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center p-4 mb-4 rounded" style="background: linear-gradient(135deg, #fff9db, #ffe066);">
+                                <div id="current-affirmation" class="display-6 fst-italic text-dark">
+                                    Click below for your first affirmation
+                                </div>
+                                <div class="mt-3">
+                                    <button onclick="newAffirmation()" class="btn-submit btn-lg">
+                                        Generate New Affirmation
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- SAVE AFFIRMATION BUTTON - CENTERED -->
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <button onclick="saveAffirmation()" class="btn-submit btn-lg px-5">
+                                        💾 Save This Affirmation
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CUSTOM AFFIRMATIONS -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3" style="font-size: 2.5rem;">✏️</div>
+                                <div>
+                                    <h3 class="text-primary mb-0">Create Your Own</h3>
+                                    <p class="text-secondary small">Personalized affirmations work best</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Write your own positive statement:</label>
+                                <textarea id="custom-affirmation" class="form-control" rows="3" placeholder="I am... I can... I will..."></textarea>
+                            </div>
+                            
+                            <div class="row g-2">
+                                <div class="col-md-6">
+                                    <button onclick="addCustomAffirmation()" class="btn-submit w-100">
+                                        Add to Generator
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button onclick="saveCustomAffirmation()" class="btn-submit w-100">
+                                        Save to My List
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3 small text-secondary">
+                                <strong>Tips for effective affirmations:</strong>
+                                <ul class="mb-0">
+                                    <li>Use present tense ("I am" not "I will be")</li>
+                                    <li>Make them believable and realistic</li>
+                                    <li>Keep them positive and specific</li>
+                                    <li>Repeat them daily with feeling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CATEGORIZED AFFIRMATIONS -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="text-info mb-3">Affirmations by Category</h4>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded">
+                                        <h6 class="text-primary">Self-Worth</h6>
+                                        <ul class="small mb-0">
+                                            <li>I am enough just as I am.</li>
+                                            <li>I deserve love and respect.</li>
+                                            <li>My needs and feelings matter.</li>
+                                            <li>I am worthy of good things.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded">
+                                        <h6 class="text-success">Anxiety & Calm</h6>
+                                        <ul class="small mb-0">
+                                            <li>I am safe in this moment.</li>
+                                            <li>I can handle whatever comes.</li>
+                                            <li>I choose peace over worry.</li>
+                                            <li>I release what I cannot control.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded">
+                                        <h6 class="text-warning">Strength & Resilience</h6>
+                                        <ul class="small mb-0">
+                                            <li>I am stronger than my struggles.</li>
+                                            <li>Challenges help me grow.</li>
+                                            <li>I have overcome before.</li>
+                                            <li>I am resilient and adaptable.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded">
+                                        <h6 class="text-info">Self-Care & Rest</h6>
+                                        <ul class="small mb-0">
+                                            <li>I give myself permission to rest.</li>
+                                            <li>Taking care of me is important.</li>
+                                            <li>My well-being matters.</li>
+                                            <li>I honor my limits and boundaries.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- SAVED AFFIRMATIONS -->
+                    <div class="p-4 bg-light rounded mb-4">
+                        <h4 class="text-primary">My Saved Affirmations</h4>
+                        <div id="saved-list" class="mt-3">
+                            <p class="small text-secondary">No affirmations saved yet. Start saving your favorites!</p>
+                        </div>
+                        <button onclick="viewAllSaved()" class="btn-submit w-100 mt-3">View All Saved</button>
+                        <button onclick="clearSaved()" class="btn-submit w-100 mt-2" style="background: linear-gradient(135deg, #6c757d, #495057);">Clear All Saved</button>
+                    </div>
+                    
+                    <!-- PRACTICE TRACKER -->
+                    <div class="p-4 rounded mb-4" style="background: linear-gradient(135deg, #e8f4fd, #d4e7fa);">
+                        <h5 class="text-primary">Daily Practice Tracker</h5>
+                        <div class="mt-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="small">Today's practice:</span>
+                                <span class="small" id="today-count">0/3 affirmations</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div id="practice-progress" class="progress-bar bg-primary" style="width: 0%"></div>
+                            </div>
+                            <button onclick="logPractice()" class="btn-submit w-100 mt-3">Log Today's Practice</button>
+                            <p class="small mt-2 mb-0">Research shows repeating affirmations daily for 21 days builds new neural pathways.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- OTHER CALM TECHNIQUES -->
+                    <div class="p-4 rounded" style="background: linear-gradient(135deg, #fdfcfb, #e2d1c3);">
+                        <h5 class="text-primary">Other Calm Techniques</h5>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="breathing.html" class="btn-submit">Breathing Techniques →</a>
+                            <a href="grounding.html" class="btn-submit">Grounding Exercises →</a>
+                            <a href="pause.html" class="btn-submit">Pause Techniques →</a>
+                            <a href="physical.html" class="btn-submit">Physical Movement →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <small>&copy; 2026 The Emotional Helper – Speak Kindly to Yourself</small>
+            <p class="mt-2 small"><a href="calm.html" class="text-primary">← Back to Main Calm Page</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Affirmation database
+        const affirmations = {
+            'general': [
+                "I am enough, just as I am.",
+                "My feelings are valid and important.",
+                "I can handle whatever comes my way.",
+                "I choose peace over perfection.",
+                "I am worthy of love and respect.",
+                "I give myself permission to rest.",
+                "I am stronger than my struggles.",
+                "I am learning and growing every day.",
+                "I trust myself to make good decisions.",
+                "I am capable of calming my mind and body."
+            ],
+            'self-worth': [
+                "I am deserving of happiness.",
+                "My worth is not determined by my productivity.",
+                "I am valuable simply because I exist.",
+                "I accept myself completely.",
+                "I am proud of who I am becoming."
+            ],
+            'anxiety': [
+                "I am safe in this moment.",
+                "This feeling will pass.",
+                "I breathe in calm, I breathe out tension.",
+                "I release what I cannot control.",
+                "I have everything I need right now."
+            ],
+            'strength': [
+                "I have survived 100% of my bad days.",
+                "Challenges make me stronger.",
+                "I am resilient and adaptable.",
+                "I can do hard things.",
+                "My past struggles have prepared me for today."
+            ],
+            'self-care': [
+                "Rest is productive.",
+                "My needs matter.",
+                "I honor my limits and boundaries.",
+                "Taking care of myself is not selfish.",
+                "I listen to what my body needs."
+            ]
+        };
+
+        let currentCategory = 'general';
+        let currentAffirmation = "";
+
+        function newAffirmation() {
+            const categoryAffirmations = affirmations[currentCategory];
+            const randomIndex = Math.floor(Math.random() * categoryAffirmations.length);
+            currentAffirmation = categoryAffirmations[randomIndex];
+            document.getElementById('current-affirmation').textContent = currentAffirmation;
+            
+            // Update practice tracker
+            updatePracticeTracker();
+        }
+
+        function saveAffirmation() {
+            if (!currentAffirmation) {
+                alert("Please generate an affirmation first!");
+                return;
+            }
+            
+            const saved = JSON.parse(localStorage.getItem('savedAffirmations')) || [];
+            if (!saved.includes(currentAffirmation)) {
+                saved.push(currentAffirmation);
+                localStorage.setItem('savedAffirmations', JSON.stringify(saved));
+                updateSavedList();
+                alert("Affirmation saved to your collection!");
+            } else {
+                alert("This affirmation is already saved.");
+            }
+        }
+
+        function saveCustomAffirmation() {
+            const custom = document.getElementById('custom-affirmation').value.trim();
+            if (custom) {
+                const saved = JSON.parse(localStorage.getItem('savedAffirmations')) || [];
+                saved.push(custom);
+                localStorage.setItem('savedAffirmations', JSON.stringify(saved));
+                updateSavedList();
+                document.getElementById('custom-affirmation').value = '';
+                alert("Custom affirmation saved!");
+            } else {
+                alert("Please write an affirmation first.");
+            }
+        }
+
+        function addCustomAffirmation() {
+            const custom = document.getElementById('custom-affirmation').value.trim();
+            if (custom) {
+                affirmations.general.push(custom);
+                document.getElementById('custom-affirmation').value = '';
+                alert("Custom affirmation added to generator!");
+            } else {
+                alert("Please write an affirmation first.");
+            }
+        }
+
+        function updateSavedList() {
+            const saved = JSON.parse(localStorage.getItem('savedAffirmations')) || [];
+            const savedList = document.getElementById('saved-list');
+            
+            if (saved.length === 0) {
+                savedList.innerHTML = '<p class="small text-secondary">No affirmations saved yet. Start saving your favorites!</p>';
+            } else {
+                let html = '';
+                saved.slice(-5).reverse().forEach((aff, index) => {
+                    html += `<div class="p-2 mb-2 border rounded small">${aff}</div>`;
+                });
+                if (saved.length > 5) {
+                    html += `<p class="small text-center mt-2">...and ${saved.length - 5} more</p>`;
+                }
+                savedList.innerHTML = html;
+            }
+        }
+
+        function viewAllSaved() {
+            const saved = JSON.parse(localStorage.getItem('savedAffirmations')) || [];
+            if (saved.length === 0) {
+                alert("You haven't saved any affirmations yet.");
+            } else {
+                alert("Your saved affirmations:\n\n" + saved.join("\n\n"));
+            }
+        }
+
+        function clearSaved() {
+            if (confirm("Are you sure you want to clear all saved affirmations?")) {
+                localStorage.removeItem('savedAffirmations');
+                updateSavedList();
+                alert("All saved affirmations cleared.");
+            }
+        }
+
+        function logPractice() {
+            const today = new Date().toDateString();
+            let practiceLog = JSON.parse(localStorage.getItem('affirmationPractice')) || {};
+            
+            if (!practiceLog[today]) {
+                practiceLog[today] = 0;
+            }
+            
+            practiceLog[today]++;
+            localStorage.setItem('affirmationPractice', JSON.stringify(practiceLog));
+            updatePracticeTracker();
+            
+            alert("Practice logged! You're building positive neural pathways.");
+        }
+
+        function updatePracticeTracker() {
+            const today = new Date().toDateString();
+            let practiceLog = JSON.parse(localStorage.getItem('affirmationPractice')) || {};
+            const todayCount = practiceLog[today] || 0;
+            
+            document.getElementById('today-count').textContent = `${todayCount}/3 affirmations`;
+            const progress = Math.min((todayCount / 3) * 100, 100);
+            document.getElementById('practice-progress').style.width = `${progress}%`;
+        }
+
+        // Initialize
+        window.onload = function() {
+            updateSavedList();
+            updatePracticeTracker();
+        };
+    </script>
+</body>
+</html>

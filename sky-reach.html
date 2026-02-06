@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reach for Sky - Physical Movement Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Style2.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-area" style="text-align: center;">
+                <h1><i class="fas fa-seedling me-2"></i>YOUR EMOTIONAL GUIDE</h1>
+                <small>Support for emotions, stress & daily life</small>
+            </div>
+              <nav>
+                <a href="index.html" class="btn-light"><i class="fas fa-home me-1"></i>Home</a>
+                <a href="mood.html" class="btn-light"><i class="fas fa-heartbeat me-1"></i>Mood Check</a>
+                <a href="topics.html" class="btn-light"><i class="fas fa-comments me-1"></i>Topics</a>
+                <a href="family.html" class="btn-light"><i class="fas fa-users me-1"></i>Family</a>
+                <a href="relationships.html" class="btn-light"><i class="fas fa-hands-helping me-1"></i>Relationships</a>
+                <a href="calm.html" class="btn-warning active"><i class="fas fa-spa me-1"></i>Calm Technique</a>
+                <a href="about.html" class="btn-light"><i class="fas fa-info-circle me-1"></i>About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container py-4">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="calm.html">Calm Techniques</a></li>
+                    <li class="breadcrumb-item"><a href="physical.html">Physical Movement</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Reach for Sky</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="me-3" style="font-size: 3rem;">☝️</div>
+                                <div>
+                                    <h1 class="card-title text-info mb-0">Reach for Sky Exercise</h1>
+                                    <p class="text-secondary"><strong>Full body stretch to release tension, improve posture, and energize your system</strong></p>
+                                </div>
+                            </div>
+                            
+                            <div class="stretch-emoji">🧍‍♀️⬆️☁️</div>
+                            
+                            <div class="p-4 bg-light rounded mb-4 text-center">
+                                <h4 class="mb-3">⏱️ Timer: <span id="timer">0:00</span></h4>
+                                <div class="btn-group" role="group">
+                                    <button onclick="startTimer(180)" class="btn-submit">3-Minute Session</button>
+                                    <button onclick="startGuidedStretch()" class="btn-submit">Guided Stretch</button>
+                                    <button onclick="startTimer(60)" class="btn-submit">Quick 1-Minute</button>
+                                </div>
+                            </div>
+                            
+                            <h3 class="mt-4">Step-by-Step Instructions</h3>
+                            
+                            <div class="step-card">
+                                <h5>1. Standing Position</h5>
+                                <p>Stand with feet hip-width apart, knees slightly bent (not locked). Ground yourself through your feet.</p>
+                            </div>
+                            
+                            <div class="step-card">
+                                <h5>2. Inhale Deeply</h5>
+                                <p>Take a slow, deep breath in through your nose. Feel your ribcage expand.</p>
+                            </div>
+                            
+                            <div class="step-card">
+                                <h5>3. Reach Upward</h5>
+                                <p>As you inhale, slowly raise both arms overhead. Reach through your fingertips toward the sky.</p>
+                            </div>
+                            
+                            <div class="step-card">
+                                <h5>4. Full Extension</h5>
+                                <p>Reach as high as comfortable. Feel the stretch through your sides, back, and shoulders.</p>
+                            </div>
+                            
+                            <div class="step-card">
+                                <h5>5. Hold and Breathe</h5>
+                                <p>Hold the stretch for 15-30 seconds. Continue deep, even breathing.</p>
+                            </div>
+                            
+                            <div class="step-card">
+                                <h5>6. Release Slowly</h5>
+                                <p>Exhale as you slowly lower your arms. Feel the release of tension.</p>
+                            </div>
+                            
+                            <div class="row g-3 mt-4">
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded">
+                                        <h6>Variation 1: Side Reach</h6>
+                                        <p class="small">Reach up with right arm, then gently lean to left. Alternate sides. Stretches intercostal muscles.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded">
+                                        <h6>Variation 2: Reach and Rise</h6>
+                                        <p class="small">Rise onto toes as you reach up, balancing for 5 seconds. Improves balance and calf stretch.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-info mt-4">
+                                <h5>🌬️ Breathing Instructions</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p class="mb-1"><strong>Inhale (4 seconds):</strong> Raise arms overhead</p>
+                                        <p class="mb-1"><strong>Hold (4 seconds):</strong> Maintain stretch at top</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="mb-1"><strong>Exhale (6 seconds):</strong> Lower arms slowly</p>
+                                        <p class="mb-0"><strong>Repeat:</strong> 3-5 times for best effect</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <h4>Physical & Mental Benefits</h4>
+                                <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <div class="p-3 border rounded h-100">
+                                            <h6>Posture Correction</h6>
+                                            <ul class="small">
+                                                <li>Counters forward head posture</li>
+                                                <li>Opens chest muscles</li>
+                                                <li>Aligns spinal vertebrae</li>
+                                                <li>Strengthens core muscles</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="p-3 border rounded h-100">
+                                            <h6>Energy Boost</h6>
+                                            <ul class="small">
+                                                <li>Increases oxygen intake</li>
+                                                <li>Improves circulation</li>
+                                                <li>Stimulates nervous system</li>
+                                                <li>Reduces fatigue</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="p-3 border rounded h-100">
+                                            <h6>Mental Clarity</h6>
+                                            <ul class="small">
+                                                <li>Clears mental fog</li>
+                                                <li>Reduces stress hormones</li>
+                                                <li>Improves focus</li>
+                                                <li>Creates sense of expansion</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="p-4 rounded mb-4" style="background: linear-gradient(135deg, #e8f4fd, #d4e7fa);">
+                        <h5 class="text-primary">Practice Now</h5>
+                        <div class="d-grid gap-2 mt-3">
+                            <button onclick="startGuidedStretch()" class="btn-submit">Start Guided Session</button>
+                            <button onclick="startTimer(120)" class="btn-submit">2-Minute Timer</button>
+                            <button onclick="logSession()" class="btn-submit btn-success">Log This Session</button>
+                            <a href="physical.html" class="btn-submit">← Back to All Movements</a>
+                        </div>
+                    </div>
+                    
+                    <div class="p-4 rounded mb-4" style="background: linear-gradient(135deg, #f0f9ff, #e1f7ff);">
+                        <h5 class="text-primary">Complementary Stretches</h5>
+                        <div class="mt-3">
+                            <a href="gentle-twists.html" class="d-block p-3 border rounded mb-2 text-decoration-none">
+                                <strong>Gentle Twists →</strong>
+                                <p class="small mb-0">Spinal rotation after extension</p>
+                            </a>
+                            <a href="shoulder-shrugs.html" class="d-block p-3 border rounded mb-2 text-decoration-none">
+                                <strong>Shoulder Shrugs →</strong>
+                                <p class="small mb-0">Shoulder tension release</p>
+                            </a>
+                            <a href="cat-cow.html" class="d-block p-3 border rounded text-decoration-none">
+                                <strong>Cat-Cow →</strong>
+                                <p class="small mb-0">Spinal flexion and extension</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="p-4 rounded" style="background: linear-gradient(135deg, #fef7e6, #fff3cd);">
+                        <h5 class="text-primary">When You Need This Most</h5>
+                        <ul class="small mt-3">
+                            <li>Morning upon waking</li>
+                            <li>After long sitting periods</li>
+                            <li>When feeling sluggish</li>
+                            <li>Before important tasks</li>
+                            <li>During afternoon slump</li>
+                            <li>After stressful events</li>
+                            <li>Before bed (gentle version)</li>
+                        </ul>
+                        <p class="small mt-3 mb-0"><strong>Pro tip:</strong> Combine with deep breathing for maximum effect</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <small>&copy; 2026 The Emotional Helper – Move to Feel Better</small>
+            <p class="mt-2 small"><a href="physical.html" class="text-primary">← Back to All Physical Movements</a></p>
+        </div>
+    </footer>
+
+    <script>
+        let timerInterval;
+        let secondsLeft = 0;
+        
+        function startTimer(duration) {
+            clearInterval(timerInterval);
+            secondsLeft = duration;
+            
+            updateTimerDisplay();
+            
+            timerInterval = setInterval(function() {
+                secondsLeft--;
+                updateTimerDisplay();
+                
+                if (secondsLeft <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Sky reach session complete! Notice how your posture feels taller and your breathing is deeper.");
+                    logSession();
+                }
+            }, 1000);
+        }
+        
+        function startGuidedStretch() {
+            const steps = [
+                {action: "Stand with feet hip-width apart", duration: 5000},
+                {action: "Take a deep breath in...", duration: 4000},
+                {action: "As you inhale, slowly raise arms overhead", duration: 4000},
+                {action: "Reach through fingertips, feel the stretch", duration: 10000},
+                {action: "Hold the stretch... breathe deeply", duration: 15000},
+                {action: "Slowly exhale as you lower arms", duration: 6000},
+                {action: "Repeat 2 more times", duration: 30000}
+            ];
+            
+            let currentStep = 0;
+            
+            function nextStep() {
+                if (currentStep < steps.length) {
+                    alert(steps[currentStep].action);
+                    currentStep++;
+                    setTimeout(nextStep, steps[currentStep-1].duration);
+                } else {
+                    alert("Complete! Three full sky reaches done. You should feel more energized and open.");
+                    logSession();
+                }
+            }
+            
+            alert("Guided Sky Reach Session\n\nWe'll do 3 repetitions with breathing guidance. Get ready to stand up!");
+            nextStep();
+        }
+        
+        function updateTimerDisplay() {
+            const minutes = Math.floor(secondsLeft / 60);
+            const seconds = secondsLeft % 60;
+            document.getElementById('timer').textContent = 
+                `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }
+        
+        function logSession() {
+            const today = new Date().toDateString();
+            let movementLog = JSON.parse(localStorage.getItem('movementSessions')) || {};
+            
+            if (!movementLog[today]) {
+                movementLog[today] = 0;
+            }
+            
+            movementLog[today]++;
+            localStorage.setItem('movementSessions', JSON.stringify(movementLog));
+            alert("Sky reach session logged! This full-body stretch is excellent for posture and energy.");
+        }
+    </script>
+</body>
+</html>

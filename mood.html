@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Guide – Mood Check</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Style2.css">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+       <header>
+        <div class="container">
+            <div class="logo-area" style="text-align: center;">
+                <h1><i class="fas fa-seedling me-2"></i>YOUR EMOTIONAL GUIDE</h1>
+                <small>Support for emotions, stress & daily life</small>
+            </div>
+            <nav>
+                <a href="index.html" class="btn-light"><i class="fas fa-home me-1"></i>Home</a>
+                <a href="mood.html" class="btn-warning active"><i class="fas fa-heartbeat me-1"></i>Mood Check</a>
+                <a href="topics.html" class="btn-light"><i class="fas fa-comments me-1"></i>Topics</a>
+                <a href="family.html" class="btn-light"><i class="fas fa-users me-1"></i>Family</a>
+                <a href="relationships.html" class="btn-light"><i class="fas fa-hands-helping me-1"></i>Relationships</a>
+                <a href="calm.html" class="btn-light"><i class="fas fa-spa me-1"></i>Calm Technique</a>
+                <a href="about.html" class="btn-light"><i class="fas fa-info-circle me-1"></i>About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container py-4">
+            <!-- Page Header -->
+            <div class="text-left mb-5">
+                <h1 class="page-title">How Are You Feeling Today?</h1>
+                <h5 class="text-secondary mb-4"><strong>Select your current mood to get personalized support and track your emotional journey.</strong></h5>
+            </div>
+            
+            <div class="row">
+                <!-- Left Column: Mood Selection -->
+                <div class="col-lg-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="text-primary mb-4 text-center">Select Your Current Mood</h3>
+                            
+                            <!-- Mood Selection Grid -->
+                            <div class="row justify-content-center g-4 mb-4">
+                                <!-- Happy -->
+                                <div class="col-auto">
+                                    <div class="mood-card text-center p-4" data-mood="happy" onclick="selectMood('happy')">
+                                        <div class="d-flex justify-content-center align-items-center mb-3" style="height: 80px;">
+                                            <span class="mood-emoji display-4">😊</span>
+                                        </div>
+                                        <div class="mood-label fw-bold fs-5">Happy</div>
+                                    </div>
+                                </div>
+                                <!-- Calm -->
+                                <div class="col-auto">
+                                    <div class="mood-card text-center p-4" data-mood="calm" onclick="selectMood('calm')">
+                                        <div class="d-flex justify-content-center align-items-center mb-3" style="height: 80px;">
+                                            <span class="mood-emoji display-4">😌</span>
+                                        </div>
+                                        <div class="mood-label fw-bold fs-5">Calm</div>
+                                    </div>
+                                </div>
+                                <!-- Sad -->
+                                <div class="col-auto">
+                                    <div class="mood-card text-center p-4" data-mood="sad" onclick="selectMood('sad')">
+                                        <div class="d-flex justify-content-center align-items-center mb-3" style="height: 80px;">
+                                            <span class="mood-emoji display-4">😢</span>
+                                        </div>
+                                        <div class="mood-label fw-bold fs-5">Sad</div>
+                                    </div>
+                                </div>
+                                <!-- Angry -->
+                                <div class="col-auto">
+                                    <div class="mood-card text-center p-4" data-mood="angry" onclick="selectMood('angry')">
+                                        <div class="d-flex justify-content-center align-items-center mb-3" style="height: 80px;">
+                                            <span class="mood-emoji display-4">😠</span>
+                                        </div>
+                                        <div class="mood-label fw-bold fs-5">Angry</div>
+                                    </div>
+                                </div>
+                                <!-- Stressed -->
+                                <div class="col-auto">
+                                    <div class="mood-card text-center p-4" data-mood="stress" onclick="selectMood('stress')">
+                                        <div class="d-flex justify-content-center align-items-center mb-3" style="height: 80px;">
+                                            <span class="mood-emoji display-4">😰</span>
+                                        </div>
+                                        <div class="mood-label fw-bold fs-5">Stress</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Mood Response Section -->
+                            <div id="mood-response" class="mood-response-card p-4 rounded bg-light" style="display: none;">
+                                <div class="text-center mb-4">
+                                    <h3 id="mood-title" class="text-primary mb-3"></h3>
+                                    <p id="mood-message" class="lead mb-4"></p>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <h5 class="text-warning mb-3 text-center">📝 Suggested Actions</h5>
+                                    <div id="mood-actions" class="row g-3"></div>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <button onclick="saveMood()" class="btn-submit btn-lg px-5">
+                                        💾 Save This Mood Entry
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mood History -->
+                    <div id="mood-history" class="card" style="display: none;">
+                        <div class="card-body">
+                            <h4 class="text-primary mb-4">📚 Your Recent Mood Entries</h4>
+                            <div id="history-list" class="mb-4"></div>
+                            <div class="text-center">
+                                <button onclick="clearHistory()" class="btn-submit" style="background: linear-gradient(135deg, #dc3545, #c82333);">
+                                    🗑️ Clear History
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Benefits -->
+                <div class="col-lg-4">
+                    <!-- Mood Tracking Benefits -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="text-primary mb-4 text-center">📊 Mood Tracking Benefits</h4>
+                            <div class="benefits-grid">
+                                <div class="benefit-card p-3 border rounded mb-3">
+                                    <div class="text-center mb-2">
+                                        <span class="benefit-icon display-6">📈</span>
+                                    </div>
+                                    <h5 class="text-center mb-2">Pattern Recognition</h5>
+                                    <p class="small mb-0 text-secondary text-center">Identify triggers and mood patterns over time to understand what affects your emotional state.</p>
+                                </div>
+                                <div class="benefit-card p-3 border rounded mb-3">
+                                    <div class="text-center mb-2">
+                                        <span class="benefit-icon display-6">💡</span>
+                                    </div>
+                                    <h5 class="text-center mb-2">Self-Awareness</h5>
+                                    <p class="small mb-0 text-secondary text-center">Increase emotional intelligence and develop deeper self-understanding through regular reflection.</p>
+                                </div>
+                                <div class="benefit-card p-3 border rounded">
+                                    <div class="text-center mb-2">
+                                        <span class="benefit-icon display-6">🎯</span>
+                                    </div>
+                                    <h5 class="text-center mb-2">Progress Tracking</h5>
+                                    <p class="small mb-0 text-secondary text-center">Monitor improvement over time and celebrate small victories in your emotional journey.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Tips -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="text-info mb-3 text-center">💭 Quick Tips</h4>
+                            <ul class="small">
+                                <li class="mb-2">All emotions are valid and temporary</li>
+                                <li class="mb-2">Check in with yourself at least once daily</li>
+                                <li class="mb-2">Be honest with your feelings</li>
+                                <li class="mb-2">Use the suggestions as starting points</li>
+                                <li>Tracking helps build emotional resilience</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <small>&copy; 2026 The Emotional Helper – Your Mood Companion</small>
+            <p class="mt-2 text-center"><small>Remember: All emotions are valid. What matters is how we respond to them.</small></p>
+        </div>
+    </footer>
+
+    <script>
+        let currentMood = '';
+        const moodData = JSON.parse(localStorage.getItem('moodHistory')) || [];
+        
+        const moodResponses = {
+            happy: {
+                title: "That's Wonderful! 😊",
+                message: "Your positive energy is contagious! Enjoy this moment and consider sharing your good mood with someone else today.",
+                actions: [
+                    "Practice gratitude - write down 3 things you're thankful for",
+                    "Spread kindness - do something nice for someone",
+                    "Capture the moment - journal about what's making you happy"
+                ]
+            },
+            calm: {
+                title: "Peaceful and Centered 😌",
+                message: "This calm state is perfect for reflection and mindful presence. Use this energy for creative or thoughtful activities.",
+                actions: [
+                    "Try a mindfulness meditation (5-10 minutes)",
+                    "Engage in a creative activity you enjoy",
+                    "Practice deep breathing to maintain this state"
+                ]
+            },
+            sad: {
+                title: "Acknowledging Your Sadness 😢",
+                message: "It's okay to feel sad. These feelings are valid and important. Be gentle with yourself right now.",
+                actions: [
+                    "Wrap yourself in a cozy blanket",
+                    "Listen to comforting music",
+                    "Write about your feelings in a journal",
+                    "Reach out to someone you trust"
+                ]
+            },
+            angry: {
+                title: "Feeling Angry 😠",
+                message: "Anger tells us something needs attention. Let's find a healthy way to express and understand this emotion.",
+                actions: [
+                    "Take 10 deep breaths before responding",
+                    "Go for a brisk walk to release energy",
+                    "Punch a pillow or scream into it",
+                    "Write a letter you won't send"
+                ]
+            },
+            stress: {
+                title: "Feeling Stress 😰",
+                message: "Stress happens when demands feel greater than resources. Let's break things down into manageable pieces.",
+                actions: [
+                    "Use the 5-4-3-2-1 grounding technique",
+                    "Make a prioritized to-do list",
+                    "Take a 5-minute break with no screens",
+                    "Practice progressive muscle relaxation"
+                ]
+            }
+        };
+        
+        function selectMood(mood) {
+            currentMood = mood;
+            const response = moodResponses[mood];
+            
+            // Update active state on mood cards
+            document.querySelectorAll('.mood-card').forEach(card => {
+                card.classList.remove('active');
+                if (card.getAttribute('data-mood') === mood) {
+                    card.classList.add('active');
+                }
+            });
+            
+            // Update response content
+            document.getElementById('mood-title').textContent = response.title;
+            document.getElementById('mood-message').textContent = response.message;
+            
+            // Update actions
+            const actionsHtml = response.actions.map(action => 
+                `<div class="action-item">${action}</div>`
+            ).join('');
+            document.getElementById('mood-actions').innerHTML = actionsHtml;
+            
+            // Show response section
+            document.getElementById('mood-response').style.display = 'block';
+            
+            // Smooth scroll to response
+            window.scrollTo({ 
+                top: document.getElementById('mood-response').offsetTop - 20, 
+                behavior: 'smooth' 
+            });
+            
+            // Load history
+            loadHistory();
+        }
+        
+        function saveMood() {
+            const entry = {
+                mood: currentMood,
+                date: new Date().toLocaleDateString('en-US', {
+                    weekday: 'short',
+                    month: 'short',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                }),
+                response: moodResponses[currentMood].title
+            };
+            
+            moodData.unshift(entry);
+            if (moodData.length > 10) moodData.pop();
+            
+            localStorage.setItem('moodHistory', JSON.stringify(moodData));
+            alert('✅ Mood saved successfully!');
+            loadHistory();
+        }
+        
+        function loadHistory() {
+            if (moodData.length > 0) {
+                const historyHtml = moodData.map(entry => `
+                    <div class="history-entry">
+                        <div>
+                            <strong>${getMoodEmoji(entry.mood)} ${entry.response}</strong>
+                            <div class="small text-secondary">${entry.date}</div>
+                        </div>
+                    </div>
+                `).join('');
+                
+                document.getElementById('history-list').innerHTML = historyHtml;
+                document.getElementById('mood-history').style.display = 'block';
+            }
+        }
+        
+        function getMoodEmoji(mood) {
+            const emojis = {
+                happy: '😊',
+                calm: '😌',
+                sad: '😢',
+                angry: '😠',
+                stress: '😰'
+            };
+            return emojis[mood] || '🌱';
+        }
+        
+        function clearHistory() {
+            if (confirm('Are you sure you want to clear your mood history?')) {
+                localStorage.removeItem('moodHistory');
+                moodData.length = 0;
+                document.getElementById('history-list').innerHTML = '';
+                document.getElementById('mood-history').style.display = 'none';
+                alert('History cleared successfully!');
+            }
+        }
+        
+        // Load history on page load
+        window.onload = loadHistory;
+    </script>
+</body>
+</html>

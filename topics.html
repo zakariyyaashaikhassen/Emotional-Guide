@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Guide – Emotional Wellness Topics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Style2.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Background styling  */
+        body {
+            background-image: url('images/wellness.avif');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: contain; /* Changed from 'cover' to 'contain' */
+            background-color: #f8f9fa; /* Added fallback color */
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        /* Add overlay for better readability - Increased opacity */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.6); 
+            z-index: -1;
+        }
+        
+        /* Ensure content stays above background */
+        header, main, footer {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Style cards with MORE opacity for better readability */
+        .card, .topic-card, #topic-content {
+            background-color: rgba(255, 255, 255, 0.6); 
+            backdrop-filter: blur(8px); 
+            border: 1px solid rgba(0, 0, 0, 0.1); 
+        }
+        
+        .topic-card {
+            background-color: rgba(255, 255, 255, 0.6); 
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1); 
+        }
+        
+        .topic-card:hover {
+            background-color: rgba(255, 255, 255, 1); 
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+        }
+        
+        /* Header and footer styling with more opacity */
+        header {
+            background-color: rgba(255, 255, 255, 0.98); 
+            backdrop-filter: blur(15px); 
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15); 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+        
+        footer {
+            background-color: rgba(255, 255, 255, 0.98); 
+            backdrop-filter: blur(15px); 
+            border-top: 2px solid rgba(0, 0, 0, 0.15); 
+        }
+        
+        /* Improve text contrast */
+        .page-title, .topic-title {
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8); 
+        }
+        
+        .text-secondary {
+            color: rgba(0, 0, 0, 0.7) !important; 
+        }
+        
+        /* Optional: Add a gradient overlay to the background image for better contrast */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+            z-index: -2;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-area" style="text-align: center;">
+                <h1><i class="fas fa-seedling me-2"></i>YOUR EMOTIONAL GUIDE</h1>
+                <small>Support for emotions, stress & daily life</small>
+            </div>
+            <nav>
+                <a href="index.html" class="btn-light"><i class="fas fa-home me-1"></i>Home</a>
+                <a href="mood.html" class="btn-light"><i class="fas fa-heartbeat me-1"></i>Mood Check</a>
+                <a href="topics.html" class="btn-warning active"><i class="fas fa-comments me-1"></i>Topics</a>
+                <a href="family.html" class="btn-light"><i class="fas fa-users me-1"></i>Family</a>
+                <a href="relationships.html" class="btn-light"><i class="fas fa-hands-helping me-1"></i>Relationships</a>
+                <a href="calm.html" class="btn-light"><i class="fas fa-spa me-1"></i>Calm Technique</a>
+                <a href="about.html" class="btn-light"><i class="fas fa-info-circle me-1"></i>About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Emotional Wellness Topics</h1>
+            <h5 class="text-secondary mb-4"><strong>Explore different aspects of emotional health. Click on any topic to learn practical strategies.</strong></h5>
+            
+            <div class="topic-grid">
+                <a href="#stress-management" class="topic-card" data-topic="stress">
+                    <span class="topic-icon">🔥</span>
+                    <h3 class="topic-title">Stress Management</h3>
+                    <p class="topic-desc">Techniques to reduce and manage daily stressors effectively</p>
+                </a>
+                
+                <a href="#anxiety-relief" class="topic-card" data-topic="anxiety">
+                    <span class="topic-icon">🌪️</span>
+                    <h3 class="topic-title">Anxiety Relief</h3>
+                    <p class="topic-desc">Coping strategies for anxious thoughts and feelings</p>
+                </a>
+                
+                <a href="#depression-support" class="topic-card" data-topic="depression">
+                    <span class="topic-icon">☁️</span>
+                    <h3 class="topic-title">Depression Support</h3>
+                    <p class="topic-desc">Understanding and navigating low mood periods</p>
+                </a>
+                
+                <a href="#self-care" class="topic-card" data-topic="selfcare">
+                    <span class="topic-icon">💚</span>
+                    <h3 class="topic-title">Self-Care Practices</h3>
+                    <p class="topic-desc">Daily routines for mental and emotional well-being</p>
+                </a>
+                
+                <a href="#anger-management" class="topic-card" data-topic="anger">
+                    <span class="topic-icon">⚡</span>
+                    <h3 class="topic-title">Anger Management</h3>
+                    <p class="topic-desc">Healthy ways to express and control anger</p>
+                </a>
+                
+                <a href="#sleep-wellness" class="topic-card" data-topic="sleep">
+                    <span class="topic-icon">😴</span>
+                    <h3 class="topic-title">Sleep Wellness</h3>
+                    <p class="topic-desc">Improving sleep for better emotional regulation</p>
+                </a>
+            </div>
+            
+            <div id="topic-content" class="card mt-4" style="display: none;">
+                <div class="card-header">
+                    <h3 id="topic-heading" class="mb-0"></h3>
+                </div>
+                <div class="card-body">
+                    <!-- Image container for topics with images -->
+                    <div id="topic-image-container" class="text-center mb-4" style="display: none;">
+                        <img src="" 
+                             alt=""
+                             class="img-fluid rounded shadow"
+                             style="max-height: 400px; width: auto;">
+                        <p class="text-muted small mt-2" id="image-caption"></p>
+                    </div>
+                    
+                    <div id="topic-details"></div>
+                    <button id="back-to-topics" class="btn-submit mt-3">Back to Topics</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <small>&copy; 2026 The Emotional Helper – Comprehensive Emotional Support</small>
+        </div>
+    </footer>
+
+    
+    <script src="js/topics.js"></script>
+   
+</body>
+</html>
